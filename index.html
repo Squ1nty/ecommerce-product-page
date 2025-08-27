@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/general.css">
   <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/cart.css">
 
   <!-- "Kumbh Sans" Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +24,23 @@
 </head>
 <body>
   <div class="navbarBackdropFilter"></div>
+  <div class="cartPopUp">
+    <div class="cartHeadingContainer">
+      <p>Cart</p>
+    </div>
+    <hr>
+    <div class="cartContentContainer">
+      <p class="cartEmptyText">Your Cart is empty</p>
+      <div class="cartItem">
+        <img>
+        <div class="cartItemDetails">
+          <p class="cartItemName"></p>
+          <p class="cartItemPrice"><span class="cartItemTotalPrice"></span></p>
+        </div>
+      </div>
+      <button class="checkoutBtn" aria-label="Button to proceed to Checkout">Checkout</button>
+    </div>
+  </div>
   <header>
     <div class="headerLeftContainer">
       <div class="hamburgerMenuIconContainer" tabindex="0">
@@ -78,5 +96,6 @@
   <!-- JavaScript Files -->
   <script src="./js/main.js"></script>
   <script src="./js/header.js"></script>
+  <script src="./js/cart.js"></script>
 </body>
 </html>
