@@ -1,0 +1,13 @@
+@media(max-width: 1024px){
+  nav a:hover, nav a:focus{
+    color: var(--orange);
+  }
+}
+@media(min-width: 1025px){
+  nav li:has(a:hover){
+    border-bottom-color: var(--orange);
+  }
+}
+.profileIconContainer:hover, .profileIconContainer:focus{
+  border-color: var(--orange);
+}

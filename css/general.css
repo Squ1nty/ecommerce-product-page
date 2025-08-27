@@ -3,6 +3,7 @@
   margin: 0;
 
   box-sizing: border-box;
+  font-family: "Kumbh Sans", sans-serif;
 }
 :root{
   --orange: hsl(26, 100%, 55%);
@@ -16,4 +17,9 @@
   --black: hsl(0, 0%, 0%); /* For lightbox background set this to opacity(75%) */
 
   /* Add responsive font-sizing variables here? */
+}
+svg, img{
+  max-height: 100%;
+  
+  object-fit: contain;
 }

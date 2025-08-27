@@ -1,0 +1,173 @@
+@media(max-width: 1024px){
+  header{
+    padding: min(1.5rem, 6.5vw);
+  }
+  .headerLeftContainer, .headerRightContainer{
+    gap: 5vw;
+  }
+  .hamburgerMenuIconContainer{
+    display: flex;
+  }
+  nav{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    grid-template-rows: 15px 1fr;
+    gap: 12vw;
+    }
+  .closingMenuIconContainer{
+    width: fit-content;
+    height: fit-content;
+
+    margin-left: 6vw;
+    margin-top: 6vw;
+
+    cursor: pointer;
+  }
+  nav ul{
+    padding: 6vw;
+  }
+  nav li{
+    padding: 3vw 0;
+  }
+  nav a{
+    color: var(--black);
+    font-weight: 700;
+    font-size: min(5vw, 1.25rem);
+  }
+  .profileIconContainer{
+    height: min(8vw, 2rem);
+  }
+}
+@media(min-width: 1025px){
+  body{
+    padding: 0 12vw;
+  }
+  header{
+    border-bottom: 1px solid var(--grayish-blue);
+  }
+  .headerLeftContainer, .headerRightContainer{
+    gap: 3vw;
+  }
+  .hamburgerMenuIconContainer, .closingMenuIconContainer{
+    display: none;
+  }
+  nav{
+    height: 100%;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  nav ul{
+    height: 100%;
+    display: flex;
+    gap: min(8vw, 2rem);
+  }
+  nav li{
+    height: 100%;
+    border-bottom: 3px solid transparent;
+
+    padding: min(2.5vw, 2.5rem) 0;
+    display: flex;
+    align-items: center;
+
+    transition: border 0.15s ease;
+  }
+  nav a{
+    font-size: min(1.15vw, 1.15rem);
+    color: var(--dark-grayish-blue);
+  }
+  .profileIconContainer{
+    height: min(3.5vw, 3rem);
+  }
+}
+
+header{
+  width: 100%;
+
+  justify-content: space-between;
+  overflow: hidden;
+}
+header, .headerLeftContainer, .headerRightContainer,
+.companyLogoIconContainer, .cartIconContainer, .profileIconContainer{
+  display: flex;
+}
+.headerLeftContainer, .headerRightContainer, .companyLogoIconContainer{
+  align-items: center;
+  justify-content: center;
+}
+.hamburgerMenuIconContainer, .companyLogoIconContainer,
+.cartIconContainer, .profileIconContainer{
+  cursor: pointer;
+}
+.hamburgerMenuIconContainer, .companyLogoIconContainer, .cartIconContainer{
+  height: 20px;
+}
+.hamburgerMenuIconContainer, .cartIconContainer, .profileIconContainer{
+  width: fit-content;
+}
+.hamburgerMenuIconContainer{
+  align-items: center;
+}
+.profileIconContainer{
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: border 0.15s ease;
+}
+
+/* Cart Styling */
+.cartIconContainer{
+  position: relative;
+}
+.cartItemCountContainer{
+  opacity: 0;
+  
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transform: translate(35%, -35%);
+
+  background-color: var(--orange);
+  padding: 0.05rem 0.5rem;
+  border-radius: 0.5rem;
+}
+.cartItemCount{
+  font-size: 0.55rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Navbar Styling */
+.navbarBackdropFilter{
+  transition: all 0.35s ease;
+}
+.navbarBackdropFilter.active{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  background-color: var(--black);
+  filter: opacity(75%);
+
+  z-index: 2;
+}
+nav{
+  background-color: var(--white);
+
+  display: grid;
+  z-index: 3;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+nav ul{
+  list-style: none;
+}
+nav a{
+  text-decoration: none;
+  cursor: pointer;
+
+  transition: color 0.15s ease;
+}

@@ -1,0 +1,7 @@
+body{
+  position: relative;
+}
+main{
+  min-height: 100svh;
+  width: 100%;
+}
