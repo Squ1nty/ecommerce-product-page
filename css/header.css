@@ -84,6 +84,7 @@
 
 header{
   width: 100%;
+  z-index: 5;
 
   justify-content: space-between;
   overflow: hidden;
@@ -157,8 +158,9 @@ header, .headerLeftContainer, .headerRightContainer,
 nav{
   background-color: var(--white);
 
+  z-index: 5;
+
   display: grid;
-  z-index: 3;
   overflow: hidden;
   transition: all 0.35s ease;
 }

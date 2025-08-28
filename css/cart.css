@@ -1,22 +1,27 @@
 @media(max-width: 1024px){
 	.cartPopUp{
-		left: 50%;
-		transform: translateX(-50%);
+		top: 10%;
+		right: 3vw;
 		box-shadow: 0 2px 5px lightgray;
 	}
 }
 @media(min-width: 1025px){
 	.cartPopUp{
-		right: 10%;
+		top: min(6vw, 5.5rem);
+		right: 10vw;
 		box-shadow: 0 5px 20px lightgray;
 	}
 }
+
+/*  */
+
 .cartPopUp{
   position: absolute;
-  top: 10%;
 
-  width: 350px;
+  width: min(350px, 94vw);
 	border-radius: 1rem;
+	background-color: var(--white);
+	z-index: 10;
 
 	transition: opacity 0.15s ease;
 }
