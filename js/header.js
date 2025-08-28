@@ -10,6 +10,9 @@ let lastNavAnchorTag = navAnchorTags[navAnchorTags.length - 1];
 let backdropFilter = document.querySelector(".navbarBackdropFilter");
 let isNavbarOpen = false;
 
+let companyLogoIconContainer = document.querySelector(".companyLogoIconContainer");
+let cartIconContainer = document.querySelector(".cartIconContainer");
+
 // Handles how navbar is displayed upon loading or resizing the window
 function handleNavbarWindowSize(){
   if(window.innerWidth <= 1024){
@@ -31,6 +34,9 @@ lastNavAnchorTag.addEventListener("keydown", (e) => {
   e.preventDefault();
   if(e.key === "Tab" && window.innerWidth <= 1024){
     closingMenuIcon.focus();
+  }
+  else if(e.key === "Tab" && window.innerWidth >= 1025){
+    cartIconContainer.focus();
   }
 });
 
@@ -74,5 +80,15 @@ closingMenuIcon.addEventListener("keydown", (e) => {
 backdropFilter.addEventListener("click", (e) => {
   if(isNavbarOpen === true){
     handleNavbarClose();
+  }
+});
+
+// Handles "Tab" input for companyLogoIconContainer
+companyLogoIconContainer.addEventListener("keydown", (e) => {
+  if(window.innerWidth <= 1024){
+    e.preventDefault();
+    if(e.key === "Tab"){
+      cartIconContainer.focus();
+    }
   }
 });
