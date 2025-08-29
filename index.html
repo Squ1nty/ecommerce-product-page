@@ -23,7 +23,7 @@
 
 </head>
 <body>
-  <div class="navbarBackdropFilter"></div>
+  <div class="navbarBackdropFilter" inert=""></div>
   <div class="cartPopUp">
     <div class="cartHeadingContainer">
       <p class="cartHeading">Cart</p>
@@ -85,33 +85,41 @@
     
   </header>
   <main>
+    <div class="itemLightbox" style="display: none"></div>
     <div class="itemImgWrapper">
-      <div class="closingLightboxIconContainer" tabindex="0"></div>
       <div class="itemImgContainer" tabindex="0">
         <img class="currentItemImg">
-        <div class="imgArrowContainer" tabindex="0">
-          <!-- Import SVG for arrow -->
+        <div class="imgArrowContainer imgArrowContainerBack" tabindex="0">
+          <svg class="arrowSVG" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
         </div>
-        <div class="imgArrowContainer" tabindex="0">
-          <!-- Import SVG for arrow -->
+        <div class="imgArrowContainer imgArrowContainerNext" tabindex="0">
+          <svg class="arrowSVG" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
         </div>
       </div>
-      <div class="allItemImgWrapper">
-        <div class="otherItemImgContainer" tabindex="0">
-          <img class="otherItemImg">
+      <div class="itemThumbnailImgWrapper">
+        <div class="itemThumbnailImgContainer" tabindex="0">
+          <div class="thumbnailImgBackdropFilter" inert=""></div>
+          <img class="itemThumbnailImg1 itemThumbnailImg">
         </div>
-        <div class="otherItemImgContainer" tabindex="0">
-          <img class="otherItemImg">
+        <div class="itemThumbnailImgContainer" tabindex="0">
+          <div class="thumbnailImgBackdropFilter" inert=""></div>
+          <img class="itemThumbnailImg2 itemThumbnailImg">
         </div>
-        <div class="otherItemImgContainer" tabindex="0">
-          <img class="otherItemImg">
+        <div class="itemThumbnailImgContainer" tabindex="0">
+          <div class="thumbnailImgBackdropFilter" inert=""></div>
+          <img class="itemThumbnailImg3 itemThumbnailImg">
         </div>
-        <div class="otherItemImgContainer" tabindex="0">
-          <img class="otherItemImg">
+        <div class="itemThumbnailImgContainer" tabindex="0">
+          <div class="thumbnailImgBackdropFilter" inert=""></div>
+          <img class="itemThumbnailImg4 itemThumbnailImg">
         </div>
       </div>
     </div>
-    <div class="itemDetails"></div>
+    <div class="itemDetails">.</div>
   </main>
   <footer>
     <div class="attribution">
@@ -119,6 +127,21 @@
       Coded by <a href="https://www.frontendmentor.io/profile/Squ1nty">Vincent Dao</a>.
     </div>
   </footer>
+
+  <!--
+        <div class="imgArrowContainer imgArrowContainerBack" tabindex="0">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </div>
+        <div class="imgArrowContainer imgArrowContainerNext" tabindex="0">
+          <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </div> <-- Arrows
+
+        <div class="closingLightboxIconContainer" tabindex="0"></div> <-- closingCOtnianer
+  -->
 
   <!-- JavaScript Files -->
   <script src="./js/main.js"></script>

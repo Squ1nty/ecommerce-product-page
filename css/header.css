@@ -67,7 +67,7 @@
     height: 100%;
     border-bottom: 3px solid transparent;
 
-    padding: min(2.5vw, 2.5rem) 0;
+    padding: min(2.5vw, 2.5rem) 2px;
     display: flex;
     align-items: center;
 
@@ -140,16 +140,19 @@ header, .headerLeftContainer, .headerRightContainer,
 }
 
 /* Navbar Styling */
+
 .navbarBackdropFilter{
-  transition: all 0.35s ease;
-}
-.navbarBackdropFilter.active{
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  
+
+  background-color: transparent;
+  filter: none;
+  transition: all 0.35s ease;
+}
+.navbarBackdropFilter.active{
   background-color: var(--black);
   filter: opacity(75%);
 

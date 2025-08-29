@@ -11,3 +11,10 @@
 .profileIconContainer:hover, .profileIconContainer:focus{
   border-color: var(--orange);
 }
+.itemThumbnailImgContainer.active{
+  border-color: var(--orange);
+}
+.itemThumbnailImgContainer.active .thumbnailImgBackdropFilter{
+  background-color: white;
+  opacity: 50%;
+}
