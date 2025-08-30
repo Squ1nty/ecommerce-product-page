@@ -11,17 +11,70 @@
     display: none;
   }
   .itemImgContainer{
-    height: min(80vw, 30rem);
-    width: min(100vw, 42rem);
+    height: 80vw;
+    width: 100%;
     overflow: hidden;
 
     position: relative;
+  }
+  .imgArrowContainer{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: min(10vw, 2.5rem); /* 10vw both */
+    height: min(10vw, 2.5rem);
+    background-color: var(--white);
+    border-radius: 50%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
   }
 }
 @media(min-width: 1025px){
   main{
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .itemImgWrapper{
+    padding: min(8vw, 6rem) min(4vw, 3rem);
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+  .itemThumbnailImgWrapper{
+    width: 100%;
+    display: flex;
+    gap: 2vw;
+  }
+  .itemImgContainer, .itemThumbnailImgContainer{
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  .imgArrowContainer{
+    display: none;
+  }
+  .itemThumbnailImgContainer{
+    position: relative;
+
+    border: 2px solid transparent;
+    transition: border 0.15s ease;
+  }
+  .thumbnailImgBackdropFilter{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background-color: transparent;
+    opacity: 0;
+    transition: all 0.15s ease;
+  }
+  .itemThumbnailImg{
+    height: 100%;
   }
 }
 
@@ -40,20 +93,7 @@ main img{
   height: auto;
   display: block;
 }
-.imgArrowContainer{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 
-  width: min(10vw, 2.5rem); /* 10vw both */
-  height: min(10vw, 2.5rem);
-  background-color: var(--white);
-  border-radius: 50%;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  place-items: center;
-}
 .imgArrowContainerBack{
   left: 5%;
 }

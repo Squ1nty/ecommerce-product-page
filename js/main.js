@@ -32,9 +32,7 @@ function handleCurrentMainImg(currentImgNumber){
     handleThumbnailImgActiveState(currentImgNumber);
   }
 }
-
-// Load eventListener to setup all images upon load/reload?
-window.addEventListener("load", () => {
+function handleWindowSize(){
   currentImgNumber = 1;
   handleCurrentMainImg(currentImgNumber);
 
@@ -47,11 +45,18 @@ window.addEventListener("load", () => {
       count++;
     });
   }
+}
+// Load eventListener to setup all images upon load/reload?
+window.addEventListener("load", () => {
+  handleWindowSize();
+});
+window.addEventListener("resize", () => {
+  handleWindowSize();
 });
 
 // eventListener to detect click and keydown for itemThumbnailImgContainer
 itemThumbnailImgWrapper.addEventListener("click", (e) => {
-  if(e.target.classList.contains("itemThumbnailImg")){
+  if(e.target.classList[1] === "itemThumbnailImg"){
     currentImgNumber = e.target.classList[0].slice(-1);
     handleCurrentMainImg(currentImgNumber);
   }
@@ -71,7 +76,6 @@ itemThumbnailImgWrapper.addEventListener("keydown", (e) => {
 
 // Handle image cycling
 function handleMainImgCycle(currentImgNumber, arrowClicked){
-  console.log(currentImgNumber + " " + typeof(currentImgNumber) + " " + arrowClicked);
   if(currentImgNumber === "1" && arrowClicked === "imgArrowContainerBack"){
     currentImgNumber = 4;
   }
@@ -85,7 +89,7 @@ function handleMainImgCycle(currentImgNumber, arrowClicked){
     currentImgNumber = parseInt(currentItemImg.getAttribute("src").slice(0, -4).slice(-1)) + 1;
   }
   else{
-    console.log("Error");
+    console.log("Error: Unable to change currentItemImg");
   }
   
   handleCurrentMainImg(currentImgNumber);
